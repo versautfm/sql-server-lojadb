@@ -27,9 +27,9 @@ VALUES ('Notebook ACER', 7854.00, 1),
 SELECT * FROM Clientes;
 
 INSERT INTO Pedidos ( ClienteId, Status )
-VALUES (4, 'Enviado'),
-       (6, 'Aberto'),
-       (5, 'Pago');
+VALUES (1, 'Enviado'),
+       (3, 'Aberto'),
+       (2, 'Pago');
 
 SELECT * FROM Pedidos;
 SELECT * FROM Produtos;
