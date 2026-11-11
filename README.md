@@ -52,12 +52,14 @@ Um pedido pode ter vários produtos. Por isso os produtos de cada pedido ficam n
 |---|---|
 | [`LojaBD.sql`](LojaBD.sql) | Apaga e recria o banco `LojaDB` com todas as tabelas. |
 | [`Dados_loja.sql`](Dados_loja.sql) | Insere dados de exemplo em todas as tabelas. |
+| [`Consultas.sql`](Consultas.sql) | Consultas com `JOIN`: pedidos com o nome do cliente e produtos com o nome da categoria. |
 
 ## ▶️ Como executar
 
 1. Instale o **SQL Server** (a edição Developer é gratuita) e o **SSMS**.
 2. Abra `LojaBD.sql` no SSMS e execute com **F5**.
 3. Abra `Dados_loja.sql` e execute com **F5**.
+4. Abra `Consultas.sql` e execute as consultas.
 
 > ⚠️ `LojaBD.sql` começa com `DROP DATABASE IF EXISTS LojaDB`, então rodá-lo de novo **apaga todos os dados** e recria o banco vazio.
 
@@ -69,10 +71,13 @@ Um pedido pode ter vários produtos. Por isso os produtos de cada pedido ficam n
 - Regras de integridade: `NOT NULL`, `CHECK` e `DEFAULT GETDATE()`
 - `INSERT` com várias linhas, `DELETE ... WHERE`
 - Consultas com `SELECT`, `WHERE` e `ORDER BY`
+- `JOIN` entre duas tabelas, com `Tabela.Coluna` e títulos com `AS`
+- `JOIN` combinado com `WHERE`
 
 ## 🚧 Próximos passos
 
-- [ ] `JOIN` entre tabelas
+- [x] `JOIN` entre duas tabelas
+- [ ] `JOIN` com várias tabelas (quais produtos cada cliente comprou)
 - [ ] Agregações com `GROUP BY` (faturamento por categoria, por cliente...)
 - [ ] Email único para cada cliente
 - [ ] Views, stored procedures e triggers
