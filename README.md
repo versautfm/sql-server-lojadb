@@ -52,7 +52,7 @@ Um pedido pode ter vários produtos. Por isso os produtos de cada pedido ficam n
 |---|---|
 | [`LojaBD.sql`](LojaBD.sql) | Apaga e recria o banco `LojaDB` com todas as tabelas. |
 | [`Dados_loja.sql`](Dados_loja.sql) | Insere dados de exemplo em todas as tabelas. |
-| [`Consultas.sql`](Consultas.sql) | Consultas com `JOIN`: pedidos com o nome do cliente e produtos com o nome da categoria. |
+| [`Consultas.sql`](Consultas.sql) | Consultas com `JOIN`: pedidos com o nome do cliente, produtos com o nome da categoria e quais produtos cada cliente comprou (4 tabelas). |
 
 ## ▶️ Como executar
 
@@ -73,11 +73,12 @@ Um pedido pode ter vários produtos. Por isso os produtos de cada pedido ficam n
 - Consultas com `SELECT`, `WHERE` e `ORDER BY`
 - `JOIN` entre duas tabelas, com `Tabela.Coluna` e títulos com `AS`
 - `JOIN` combinado com `WHERE`
+- Vários `JOIN`s em sequência, juntando 4 tabelas numa consulta só
 
 ## 🚧 Próximos passos
 
 - [x] `JOIN` entre duas tabelas
-- [ ] `JOIN` com várias tabelas (quais produtos cada cliente comprou)
+- [x] `JOIN` com várias tabelas (quais produtos cada cliente comprou)
 - [ ] Agregações com `GROUP BY` (faturamento por categoria, por cliente...)
 - [ ] Email único para cada cliente
 - [ ] Views, stored procedures e triggers
