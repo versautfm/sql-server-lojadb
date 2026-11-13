@@ -52,15 +52,14 @@ Um pedido pode ter vários produtos. Por isso os produtos de cada pedido ficam n
 |---|---|
 | [`LojaBD.sql`](LojaBD.sql) | Apaga e recria o banco `LojaDB` com todas as tabelas. |
 | [`Dados_loja.sql`](Dados_loja.sql) | Insere dados de exemplo em todas as tabelas. |
-| [`Consultas.sql`](Consultas.sql) | Consultas com `JOIN`: pedidos com o nome do cliente, produtos com o nome da categoria e quais produtos cada cliente comprou (4 tabelas). |
-| [`2.sql`](2.sql) | Resumos com funções de agregação: total de produtos, preço médio, mais caro e mais barato, e preço médio por categoria com `GROUP BY`. |
+| [`Consultas.sql`](Consultas.sql) | Todas as consultas de estudo: `JOIN` de 2 a 4 tabelas, funções de agregação com `GROUP BY` e o ranking de quanto cada cliente gastou, com `SUM`, `HAVING` e `ORDER BY`. |
 
 ## ▶️ Como executar
 
 1. Instale o **SQL Server** (a edição Developer é gratuita) e o **SSMS**.
 2. Abra `LojaBD.sql` no SSMS e execute com **F5**.
 3. Abra `Dados_loja.sql` e execute com **F5**.
-4. Abra `Consultas.sql` e `2.sql` e execute as consultas.
+4. Abra `Consultas.sql`, selecione a consulta que quer testar e execute com **F5**.
 
 > ⚠️ `LojaBD.sql` começa com `DROP DATABASE IF EXISTS LojaDB`, então rodá-lo de novo **apaga todos os dados** e recria o banco vazio.
 
@@ -77,13 +76,18 @@ Um pedido pode ter vários produtos. Por isso os produtos de cada pedido ficam n
 - Vários `JOIN`s em sequência, juntando 4 tabelas numa consulta só
 - Funções de agregação: `COUNT`, `AVG`, `MAX` e `MIN`
 - `GROUP BY` combinado com `JOIN` (resumo por categoria)
+- `SUM` com uma conta dentro (`Quantidade * PrecoUnitario`) juntando 3 tabelas
+- Ranking com `ORDER BY` no resultado de uma agregação (`DESC`)
+- Filtro de grupos com `HAVING`
 
 ## 🚧 Próximos passos
 
 - [x] `JOIN` entre duas tabelas
 - [x] `JOIN` com várias tabelas (quais produtos cada cliente comprou)
 - [x] Agregações com `GROUP BY` (resumo por categoria)
-- [ ] Quanto cada cliente gastou (`SUM` + `GROUP BY` com várias tabelas)
+- [x] Quanto cada cliente gastou (`SUM` + `GROUP BY` com várias tabelas)
+- [x] Filtrar grupos com `HAVING` e ordenar o ranking
+- [ ] `LEFT JOIN` para mostrar clientes sem pedido
 - [ ] Email único para cada cliente
 - [ ] Views, stored procedures e triggers
 - [ ] Índices e análise de desempenho
